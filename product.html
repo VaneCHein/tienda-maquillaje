@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Detalles del Producto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="#" onclick="toggleCart()">Carrito (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+    <main>
+        <section id="product-details">
+            <img id="product-image" src="" alt="Imagen del Producto">
+            <h2 id="product-name">Nombre del Producto</h2>
+            <p id="product-price">$0.00</p>
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" value="1" min="1">
+            <button onclick="addToCartFromDetails()">Añadir al Carrito</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tienda de Maquillaje. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal del carrito -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items"></div>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button onclick="proceedToCheckout()">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+                      
+
