@@ -1,4 +1,6 @@
 let cart = [];
+const addCartBtn = document.querySelector("#boton-carrito-add");
+addCartBtn.addEventListener('click', toggleCart)
 
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');

@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Maquillaje</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>Tienda de Maquillaje</h1>
-        <nav>
-            <ul>
-                <li><a href="#" onclick="showSection('inicio')">Inicio</a></li>
-                <li><a href="#" onclick="showSection('productos')">Productos</a></li>
-                <li><a href="#" onclick="showSection('contacto')">Contacto</a></li>
-            </ul>
-        </nav>
-        <div>
-            <a href="#" onclick="toggleCart()">Carrito (<span id="cart-count">0</span>)</a>
+        <div class="header-title">
+            <h1>Tienda de Maquillaje</h1>
+            <nav>
+                <ul class="enlaces-lista">
+                    <li><a href="#" onclick="showSection('inicio')">Inicio</a></li>
+                    <li><a href="#" onclick="showSection('productos')">Productos</a></li>
+                    <li><a href="#" onclick="showSection('contacto')">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="carrito-carrito">
+            <img src="./carrito.jpg" alt="img-carrito" class="carrito-icon" id="boton-carrito-add">
         </div>
     </header>
     <main>
-        <section id="inicio" class="section active">
+        <section id="inicio" class="section active principal-title">
             <h2>Bienvenido a nuestra tienda de maquillaje</h2>
             <p>Encuentra los mejores productos para resaltar tu belleza.</p>
         </section>
@@ -30,21 +35,24 @@
             <h2>Productos Destacados</h2>
             <div class="product-list">
                 <div class="product-item" data-id="1" data-name="Base de Maquillaje" data-price="20.00">
-                    <img src="https://www.estarguapas.com/pics/2017/05/base_de_maquillaje_perfecta.jpg" alt="Producto 1">
+                    <img src="https://www.estarguapas.com/pics/2017/05/base_de_maquillaje_perfecta.jpg"
+                        alt="Producto 1">
                     <h3>Base de Maquillaje</h3>
                     <p>$20.000</p>
                     <button onclick="redirectToProduct('1')">Ver Producto</button>
                     <button onclick="addToCart(this)">Añadir al Carrito</button>
                 </div>
                 <div class="product-item" data-id="2" data-name="Labial" data-price="15.00">
-                    <img src="https://i0.wp.com/thehappening.com/wp-content/uploads/2016/01/labios-rojos-3.jpg?w=1024&ssl=1" alt="Producto 2">
+                    <img src="https://i0.wp.com/thehappening.com/wp-content/uploads/2016/01/labios-rojos-3.jpg?w=1024&ssl=1"
+                        alt="Producto 2">
                     <h3>Labial</h3>
                     <p>$15.000</p>
                     <button onclick="redirectToProduct('2')">Ver Producto</button>
                     <button onclick="addToCart(this)">Añadir al Carrito</button>
                 </div>
                 <div class="product-item" data-id="3" data-name="Sombras de Ojos" data-price="18.00">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.SGcIdBsQY_k2rYxEhsatOAHaEK&pid=Api&P=0&h=180" alt="Producto 3">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.SGcIdBsQY_k2rYxEhsatOAHaEK&pid=Api&P=0&h=180"
+                        alt="Producto 3">
                     <h3>Sombras de Ojos</h3>
                     <p>$18.000</p>
                     <button onclick="redirectToProduct('3')">Ver Producto</button>
@@ -84,10 +92,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
- 
-
-
-
-
-
